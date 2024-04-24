@@ -19,9 +19,13 @@ export default function Home() {
 
   const calculateAge = async (e) => {
     e.preventDefault();
-    setCalculatedYear(year - myYear);
     if (myMonth > month) {
-      setCalculatedMonth(12 - (myMonth - month));
+      setCalculatedYear(year - myYear -1);
+    } else {
+      setCalculatedYear(year - myYear);
+    }
+    if (myMonth > month) {
+      setCalculatedMonth(12 - (myMonth - month) -1);
     } else {
       setCalculatedMonth(month - myMonth);
     }
