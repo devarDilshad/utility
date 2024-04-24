@@ -25,7 +25,6 @@ const PassGen = () => {
       transition: Flip,
     });
 
-  const api_key = 'c73b46d1f7msh324fa9003dd8277p1e8c16jsn0f9237434e51';
   const genPassword = async (e) => {
     e.preventDefault();
     console.log("sended req to gen pass");
@@ -39,7 +38,7 @@ const PassGen = () => {
         exclude_special_chars: !includeSpecialChar,
       },
       headers: {
-        "X-RapidAPI-Key": api_key,
+        "X-RapidAPI-Key": process.env.NEXT_PUBLIC_Key,
         "X-RapidAPI-Host": "password-generator-by-api-ninjas.p.rapidapi.com",
       },
     };
