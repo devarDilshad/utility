@@ -25,7 +25,7 @@ const PassGen = () => {
       transition: Flip,
     });
 
-  const api_key = process.env.NEXT_PUBLIC_ANALYTICS_ID;
+  const api_key = 'c73b46d1f7msh324fa9003dd8277p1e8c16jsn0f9237434e51';
   const genPassword = async (e) => {
     e.preventDefault();
     console.log("sended req to gen pass");
