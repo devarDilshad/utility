@@ -38,7 +38,8 @@ const PassGen = () => {
         exclude_special_chars: !includeSpecialChar,
       },
       headers: {
-        "X-RapidAPI-Key": process.env.NEXT_PUBLIC_Key,
+        // "X-RapidAPI-Key": process.env.NEXT_PUBLIC_Key,
+        "X-RapidAPI-Key": "c73b46d1f7msh324fa9003dd8277p1e8c16jsn0f9237434e51",
         "X-RapidAPI-Host": "password-generator-by-api-ninjas.p.rapidapi.com",
       },
     };
@@ -81,7 +82,7 @@ const PassGen = () => {
 
       <form
         onSubmit={(e) => genPassword(e)}
-        className="flex flex-col overflow-hidden gap-6 border-gray-300 bg-gray-100 dark:border-neutral-700 dark:bg-neutral-800/20 px-6 py-10 rounded backdrop-blur-xl relative"
+        className="flex flex-col overflow-hidden gap-6 bg-gray-100 border-neutral-700 bg-neutral-800/20 px-6 py-10 rounded backdrop-blur-xl relative"
       >
         {/* No. Chars */}
         <div className="flex justify-between items-center">
@@ -94,10 +95,10 @@ const PassGen = () => {
               type="button"
               id="decrement-button"
               data-input-counter-decrement="quantity-input"
-              className="bg-gray-100 dark:bg-gray-700 dark:hover:bg-rose-600 dark:border-gray-600 hover:bg-rose-400 border border-gray-300 rounded-s-lg p-3 h-10 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
+              className=" bg-gray-700  border-gray-600 hover:bg-rose-400 border rounded-s-lg p-3 h-10 focus:ring-gray-700 focus:ring-2 focus:outline-none"
             >
               <svg
-                className="w-3 h-3 text-gray-900 dark:text-white"
+                className="w-3 h-3 text-white"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -117,7 +118,7 @@ const PassGen = () => {
               id="quantity-input"
               data-input-counter
               aria-describedby="helper-text-explanation"
-              className="bg-gray-50 border-x-0 border-gray-300 h-10 text-center text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className=" border-x-0 h-10 text-center text-sm block w-full py-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
               value={numberOfChars}
               readOnly
             />
@@ -127,10 +128,10 @@ const PassGen = () => {
               type="button"
               id="increment-button"
               data-input-counter-increment="quantity-input"
-              className="bg-gray-100 dark:bg-gray-700 dark:hover:bg-blue-600 dark:border-gray-600 hover:bg-gray-200 border border-gray-300 rounded-e-lg p-3 h-10 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
+              className=" bg-gray-700 ho border-gray-600 hover:bg-gray-200 border rounded-e-lg p-3 h-10  focus:ring-gray-700 focus:ring-2 focus:outline-none"
             >
               <svg
-                className="w-3 h-3 text-gray-900 dark:text-white"
+                className="w-3 h-3  text-white"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -205,13 +206,13 @@ const PassGen = () => {
         </div>
         <button
           type="submit"
-          className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className=" border focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-blue-600 text-white border-gray-600 hover:bg-gray-700 hover:border-gray-600 focus:ring-blue-500 focus:border-blue-500"
         >
           Generate
         </button>
         <div className="flex flex-col justify-center items-center gap-4">
           <h4 className=" border-b text-center p-1">Generated Password</h4>
-          <div className="text-gray-900 w-60 bg-white border border-gray-300 text-wrap focus:outline-none focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600  dark:focus:ring-blue-500 dark:focus:border-blue-500 relative">
+          <div className=" border text-wrap focus:outline-none focus:ring-4 w-full font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-gray-800 text-white border-gray-600  focus:ring-blue-500 focus:border-blue-500 relative">
             <p className="min-h-6"> {generatedPassword} </p>
             <button
               type="button"

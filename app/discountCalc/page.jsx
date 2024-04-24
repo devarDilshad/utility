@@ -33,15 +33,16 @@ export default function Home() {
     }
   };
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start lg:items-start lg:gap-20 py-1 px-6 lg:p-24">
-      <div className="flex flex-col justify-center items-center lg:justify-start lg:items-start gap-10 mt-14">
+    <main className="flex min-h-screen flex-col items-center lg:gap-20 py-1 px-6 lg:p-24">
+      <div className="flex flex-col justify-center items-center gap-10 mt-14">
         <h1 className="text-2xl lg:text-4xl text-white text-center lg:text-start">
+          <a href="/">🔙</a>{" "}
           Discount Calculator
         </h1>
 
         <form
           onSubmit={(e) => calcDiscount(e)}
-          className="flex flex-col gap-6 border-gray-300 bg-gray-100 dark:border-neutral-700 dark:bg-neutral-800/20 px-6 py-10 rounded backdrop-blur-xl"
+          className="flex flex-col gap-6 border-neutral-700 bg-neutral-800/40 px-6 py-10 rounded backdrop-blur-xl"
         >
           <ul className="">
             <li className="flex rounded-md -mt-1">
@@ -69,7 +70,7 @@ export default function Home() {
           <div>
             <label
               htmlFor="number-input"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-white"
             >
               Original Price:
             </label>
@@ -82,7 +83,7 @@ export default function Home() {
                 type="text"
                 id="zip-input"
                 aria-describedby="helper-text-explanation"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-4 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="border text-sm rounded-lg block w-full ps-4 p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                 placeholder="90.00  "
                 pattern="^[+]?([.]\d+|\d+[.]?\d*)$"
                 required
@@ -94,7 +95,7 @@ export default function Home() {
           <div>
             <label
               htmlFor="number-input"
-              className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              className="block mb-2 text-sm font-medium text-white"
             >
               Discount:
             </label>
@@ -107,7 +108,7 @@ export default function Home() {
                 type="text"
                 id="zip-input"
                 aria-describedby="helper-text-explanation"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-4 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className=" border text-sm rounded-lg   block w-full ps-4 p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                 placeholder="15.0"
                 pattern="^[+]?([.]\d+|\d+[.]?\d*)$"
                 required
@@ -116,7 +117,7 @@ export default function Home() {
           </div>
           <button
             type="submit"
-            className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="border focus:outline-none focus:ring-4 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 bg-gray-800 text-white border-gray-600 hover:bg-gray-700 hover:border-gray-600 focus:ring-blue-500 focus:border-blue-500"
           >
             Calculate
           </button>
