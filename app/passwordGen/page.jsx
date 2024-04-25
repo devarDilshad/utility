@@ -4,7 +4,7 @@ import PassGen from "../components/PassGen";
 export const metadata = {
   title: "Passwotility",
   description:
-    " Generate strong and secure passwords instantly with our user-friendly password generator. Safeguard your accounts with randomized, hacker-resistant passwords.",
+    "Generate strong and secure passwords instantly with our user-friendly password generator. Safeguard your accounts with randomized, hacker-resistant passwords.",
 };
 export default function Home() {
   return (

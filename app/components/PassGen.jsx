@@ -52,10 +52,10 @@ const PassGen = () => {
     }
   };
 
-  const increment = (e) => {
+  const increment = () => {
     if (numberOfChars < 18) setNumberOfChars(numberOfChars + 1);
   };
-  const decrement = (e) => {
+  const decrement = () => {
     if (numberOfChars > 4) setNumberOfChars(numberOfChars - 1);
   };
 
