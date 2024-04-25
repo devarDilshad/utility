@@ -3,42 +3,42 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const title = "YouTility";
+const desc =
+  "Explore our suite of handy online tools including discount calculator, password generator, age calculator, and more. Simplify your tasks effortlessly!";
+
 export const metadata = {
-  applicationName: "YouTility",
+  applicationName: title,
   title: {
-    default: "YouTility",
-    template: "YouTility",
+    default: title,
+    template: title,
   },
-  description:
-    "Explore our suite of handy online tools including discount calculator, password generator, age calculator, and more. Simplify your tasks effortlessly!",
+  description: desc,
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "YouTility",
-    // startUpImage: [],
+    title: title,
   },
   formatDetection: {
     telephone: false,
   },
   openGraph: {
     type: "website",
-    siteName: "YouTility",
+    siteName: title,
     title: {
-      default: "YouTility",
-      template: "YouTility",
+      default: title,
+      template: title,
     },
-    description:
-      "Explore our suite of handy online tools including discount calculator, password generator, age calculator, and more. Simplify your tasks effortlessly!",
+    description: desc,
   },
   twitter: {
     card: "summary",
     title: {
-      default: "YouTility",
-      template: "YouTility",
+      default: title,
+      template: title,
     },
-    description:
-      "Explore our suite of handy online tools including discount calculator, password generator, age calculator, and more. Simplify your tasks effortlessly!",
+    description: desc,
   },
 };
 

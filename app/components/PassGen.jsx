@@ -27,8 +27,6 @@ const PassGen = () => {
 
   const genPassword = async (e) => {
     e.preventDefault();
-    console.log("sended req to gen pass");
-
     const options = {
       method: "GET",
       url: "https://password-generator-by-api-ninjas.p.rapidapi.com/v1/passwordgenerator",
@@ -38,7 +36,6 @@ const PassGen = () => {
         exclude_special_chars: !includeSpecialChar,
       },
       headers: {
-        // "X-RapidAPI-Key": process.env.NEXT_PUBLIC_Key,
         "X-RapidAPI-Key": "c73b46d1f7msh324fa9003dd8277p1e8c16jsn0f9237434e51",
         "X-RapidAPI-Host": "password-generator-by-api-ninjas.p.rapidapi.com",
       },
