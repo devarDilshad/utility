@@ -105,7 +105,7 @@ const DiscountCalc = () => {
             id="discount-input"
             aria-describedby="helper-text-explanation"
             className=" border text-sm rounded-lg   block w-full ps-4 p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-            placeholder="15.0"
+            placeholder="15.00"
             required
             autoComplete="off"
           />
