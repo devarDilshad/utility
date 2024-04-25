@@ -45,7 +45,7 @@ const AgeCalc = () => {
           <div className="grid grid-cols-1 min-[320px]:grid-cols-3 justify-center items-center gap-4">
             <div>
               <label
-                htmlFor="number-input"
+                htmlFor="day-input"
                 className="block mb-2 uppercase text-sm font-medium text-white"
               >
                 DAY
@@ -58,7 +58,7 @@ const AgeCalc = () => {
                 autoComplete="off"
                 max={31}
                 min={1}
-                id="zip-input"
+                id="day-input"
                 aria-describedby="helper-text-explanation"
                 className="border px-4 max-w-20 text-sm rounded-lg block p-2 pl-1.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                 placeholder="1-31"
@@ -67,7 +67,7 @@ const AgeCalc = () => {
             </div>
             <div>
               <label
-                htmlFor="number-input"
+                htmlFor="month-input"
                 className="block mb-2 uppercase text-sm font-medium text-white"
               >
                 month
@@ -80,7 +80,7 @@ const AgeCalc = () => {
                 autoComplete="off"
                 max={12}
                 min={1}
-                id="zip-input"
+                id="month-input"
                 aria-describedby="helper-text-explanation"
                 className="border px-4 max-w-20  text-sm rounded-lg block p-2 pl-1.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                 placeholder="12"
@@ -89,7 +89,7 @@ const AgeCalc = () => {
             </div>
             <div>
               <label
-                htmlFor="number-input"
+                htmlFor="year-input"
                 className="block mb-2 uppercase text-sm font-medium text-white"
               >
                 year
@@ -102,7 +102,7 @@ const AgeCalc = () => {
                 max={2024}
                 min={0}
                 autoComplete="off"
-                id="zip-input"
+                id="year-input"
                 aria-describedby="helper-text-explanation"
                 className=" border px-4 max-w-20   text-sm rounded-lg block p-2 pl-1.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
                 placeholder="2010"

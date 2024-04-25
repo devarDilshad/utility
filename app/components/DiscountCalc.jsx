@@ -61,7 +61,7 @@ const DiscountCalc = () => {
       {/* Price */}
       <div>
         <label
-          htmlFor="number-input"
+          htmlFor="original-price-input"
           className="block mb-2 text-sm font-medium text-white"
         >
           Original Price:
@@ -72,12 +72,13 @@ const DiscountCalc = () => {
           </div>
           <input
             onChange={(e) => setPrice(e.target.value)}
-            type="text"
-            id="zip-input"
+            type="number"
+            min={1}
+            id="original-price-input"
             aria-describedby="helper-text-explanation"
             className="border text-sm rounded-lg block w-full ps-4 p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
             placeholder="90.00  "
-            pattern="^[+]?([.]\d+|\d+[.]?\d*)$"
+            step="0.01"
             required
             autoComplete="off"
           />
@@ -87,7 +88,7 @@ const DiscountCalc = () => {
       {/* dicount */}
       <div>
         <label
-          htmlFor="number-input"
+          htmlFor="discount-input"
           className="block mb-2 text-sm font-medium text-white"
         >
           Discount:
@@ -98,12 +99,13 @@ const DiscountCalc = () => {
           </div>
           <input
             onChange={(e) => setDiscount(e.target.value)}
-            type="text"
-            id="zip-input"
+            type="number"
+            min={0}
+            step="0.01"
+            id="discount-input"
             aria-describedby="helper-text-explanation"
             className=" border text-sm rounded-lg   block w-full ps-4 p-2.5  bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
             placeholder="15.0"
-            pattern="^[+]?([.]\d+|\d+[.]?\d*)$"
             required
             autoComplete="off"
           />
