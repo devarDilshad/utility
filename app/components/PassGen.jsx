@@ -82,7 +82,7 @@ const PassGen = () => {
 
       <form
         onSubmit={(e) => genPassword(e)}
-        className="flex flex-col overflow-hidden gap-6 bg-gray-100 border-neutral-700 bg-neutral-800/20 px-6 py-10 rounded backdrop-blur-xl relative"
+        className="flex flex-col overflow-hidden gap-6 text-white bg-gray-100 border-neutral-700 bg-neutral-800/20 px-6 py-10 rounded backdrop-blur-xl relative"
       >
         {/* No. Chars */}
         <div className="flex justify-between items-center">
@@ -118,7 +118,7 @@ const PassGen = () => {
               id="quantity-input"
               data-input-counter
               aria-describedby="helper-text-explanation"
-              className=" border-x-0 h-10 text-center text-sm block w-full py-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
+              className=" border-x-0 h-10 text-center text-sm block w-full py-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500 rounded-none"
               value={numberOfChars}
               readOnly
             />
@@ -128,7 +128,7 @@ const PassGen = () => {
               type="button"
               id="increment-button"
               data-input-counter-increment="quantity-input"
-              className=" bg-gray-700 ho border-gray-600 hover:bg-gray-200 border rounded-e-lg p-3 h-10  focus:ring-gray-700 focus:ring-2 focus:outline-none"
+              className=" bg-gray-700 ho border-gray-600 hover:bg-blue-600 border rounded-e-lg p-3 h-10  focus:ring-gray-700 focus:ring-2 focus:outline-none"
             >
               <svg
                 className="w-3 h-3  text-white"
@@ -156,22 +156,34 @@ const PassGen = () => {
               <button
                 type="button"
                 className={`border-[1px] ltr:rounded-r-md px-3 ease-in-out duration-200 rtl:rounded-l-md ${
-                  !includeNum ? "border-rose-700" : "border-gray-600"
+                  !includeNum ? "bg-rose-700" : "border-gray-600"
                 }`}
                 onClick={() => setIncludeNum(false)}
               >
-                <i className="">X</i>
+                <Image
+                  src={"/no.png"}
+                  width={24}
+                  height={24}
+                  alt="check"
+                  className=""
+                />
               </button>
             </li>
             <li className="">
               <button
                 type="button"
                 className={`border-[1px] ltr:rounded-l-md px-3 ease-in-out duration-200 rtl:rounded-r-md ${
-                  includeNum ? "border-blue-700" : "border-gray-600"
+                  includeNum ? "bg-sky-800" : "border-gray-600"
                 }`}
                 onClick={() => setIncludeNum(true)}
               >
-                <i className="">✔</i>
+                <Image
+                  src={"/checks.png"}
+                  width={24}
+                  height={24}
+                  alt="check"
+                  className="p-1"
+                />
               </button>
             </li>
           </ul>
@@ -184,22 +196,34 @@ const PassGen = () => {
               <button
                 type="button"
                 className={`border-[1px] ltr:rounded-r-md px-3 ease-in-out duration-200 rtl:rounded-l-md ${
-                  !includeSpecialChar ? "border-rose-700" : "border-gray-600"
+                  !includeSpecialChar ? "bg-rose-700" : "border-gray-600"
                 }`}
                 onClick={() => setIncludeSpecialChar(false)}
               >
-                <i className="">X</i>
+                <Image
+                  src={"/no.png"}
+                  width={24}
+                  height={24}
+                  alt="check"
+                  className=""
+                />
               </button>
             </li>
             <li className="">
               <button
                 type="button"
                 className={`border-[1px] ltr:rounded-l-md px-3 ease-in-out duration-200 rtl:rounded-r-md ${
-                  includeSpecialChar ? "border-blue-700" : "border-gray-600"
+                  includeSpecialChar ? "bg-sky-800" : "border-gray-600"
                 }`}
                 onClick={() => setIncludeSpecialChar(true)}
               >
-                <i className="">✔</i>
+                <Image
+                  src={"/checks.png"}
+                  width={24}
+                  height={24}
+                  alt="check"
+                  className="p-1"
+                />
               </button>
             </li>
           </ul>

@@ -5,7 +5,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "YouTility",
-  description: "some handy utility converters or makers",
+  description:
+    "Explore our suite of handy online tools including discount calculator, password generator, age calculator, and more. Simplify your tasks effortlessly!",
 };
 
 export default function RootLayout({ children }) {
